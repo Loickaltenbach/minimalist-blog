@@ -1,0 +1,73 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "username": "admin",
+        "email": "admin@example.com",
+        "first_name": "John",
+        "last_name": "Doe",
+        "is_staff": true,
+        "is_active": true,
+        "is_superuser": true,
+        "password": "pbkdf2_sha256$600000$samplehash$samplepasswordhash"
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+        "name": "Technology"
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+        "name": "Lifestyle"
+    }
+},
+{
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+        "name": "Travel"
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+        "title": "The Future of Web Development",
+        "slug": "future-of-web-development",
+        "content": "Web development is constantly evolving, with new technologies and frameworks emerging regularly. In this article, we explore the latest trends that are shaping the future of web development.\n\nFrom progressive web applications to serverless architecture, developers have more tools than ever to create fast, scalable, and user-friendly applications. The rise of JavaScript frameworks like React, Vue, and Angular has revolutionized how we build interactive user interfaces.\n\nLooking ahead, we can expect to see continued growth in areas such as:\n\n• WebAssembly for high-performance web applications\n• JAMstack architecture for better performance and security\n• AI-powered development tools\n• Enhanced accessibility features\n• Improved mobile-first design approaches\n\nAs we move forward, staying current with these technologies will be crucial for any web developer looking to build modern, competitive applications.",
+        "published_date": "2025-07-10T10:00:00Z",
+        "category": 1,
+        "author": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+        "title": "Minimalism in Digital Life",
+        "slug": "minimalism-digital-life",
+        "content": "In our increasingly connected world, digital minimalism has become more important than ever. This philosophy focuses on being more intentional about the technology we use and how we use it.\n\nDigital minimalism isn't about rejecting technology entirely. Instead, it's about carefully choosing which digital tools truly add value to our lives and eliminating those that don't. This approach can lead to:\n\n• Reduced screen time and digital overwhelm\n• Improved focus and productivity\n• Better sleep and mental health\n• More meaningful real-world connections\n• Enhanced creativity and deep thinking\n\nSome practical steps to embrace digital minimalism include:\n\n1. Conducting a digital declutter of your devices\n2. Setting specific times for checking emails and social media\n3. Using apps and tools that align with your values\n4. Creating tech-free zones in your home\n5. Practicing mindful consumption of digital content\n\nBy being more intentional about our digital choices, we can reclaim our time and attention for what truly matters.",
+        "published_date": "2025-07-09T14:30:00Z",
+        "category": 2,
+        "author": 1
+    }
+},
+{
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+        "title": "Discovering Hidden Gems: A Guide to Slow Travel",
+        "slug": "discovering-hidden-gems-slow-travel",
+        "content": "Slow travel is a mindful approach to exploring the world that emphasizes quality over quantity. Instead of rushing through multiple destinations, slow travelers take time to truly experience and understand the places they visit.\n\nThis travel philosophy offers numerous benefits:\n\n• Deeper cultural immersion and understanding\n• More meaningful connections with locals\n• Reduced environmental impact\n• Better value for money\n• Less travel stress and fatigue\n• Discovery of hidden gems off the beaten path\n\nTo practice slow travel effectively:\n\n**Stay Longer**: Spend at least a week in each destination. This allows you to settle in, establish routines, and discover places that aren't in guidebooks.\n\n**Use Local Transportation**: Take buses, trains, or even walk instead of flying when possible. The journey becomes part of the experience.\n\n**Learn the Language**: Even basic phrases can open doors to authentic experiences and genuine connections.\n\n**Shop at Local Markets**: Visit farmers' markets and local shops instead of tourist-focused stores.\n\n**Choose Local Accommodations**: Stay in family-run guesthouses, apartments, or homestays rather than international hotel chains.\n\nSlow travel isn't just about seeing the world—it's about truly experiencing it.",
+        "published_date": "2025-07-08T09:15:00Z",
+        "category": 3,
+        "author": 1
+    }
+}
+]

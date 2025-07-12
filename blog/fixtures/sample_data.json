@@ -1,0 +1,73 @@
+[
+  {
+    "model": "blog.category",
+    "pk": 1,
+    "fields": {
+      "nom": "Technologie"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 2,
+    "fields": {
+      "nom": "Lifestyle"
+    }
+  },
+  {
+    "model": "blog.category",
+    "pk": 3,
+    "fields": {
+      "nom": "Voyages"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@example.com",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "password": "pbkdf2_sha256$600000$xyz$abc123"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 1,
+    "fields": {
+      "titre": "Bienvenue sur notre blog minimaliste",
+      "slug": "bienvenue-sur-notre-blog-minimaliste",
+      "contenu": "Bienvenue sur ce blog minimaliste dédié à la simplicité et à l'élégance. Ici, nous partageons nos réflexions sur la technologie, le lifestyle et bien d'autres sujets passionnants.\n\nCe blog a été conçu avec Django et privilégie une approche minimaliste, mettant l'accent sur le contenu plutôt que sur les artifices visuels.\n\nNous espérons que vous apprécierez votre visite et que vous trouverez nos articles intéressants et enrichissants.",
+      "date_publication": "2025-01-01T10:00:00Z",
+      "categorie": 2,
+      "auteur": 1
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 2,
+    "fields": {
+      "titre": "Les avantages du développement avec Django",
+      "slug": "les-avantages-du-developpement-avec-django",
+      "contenu": "Django est un framework web Python qui se distingue par sa philosophie 'batteries incluses'. Il offre de nombreux avantages pour le développement web moderne.\n\nParmi ses points forts, on peut citer :\n- Une architecture MVT (Model-View-Template) bien structurée\n- Un ORM puissant et intuitif\n- Une interface d'administration automatique\n- Une excellente sécurité par défaut\n- Une communauté active et une documentation complète\n\nCes caractéristiques font de Django un choix excellent pour créer des applications web robustes et maintenables.",
+      "date_publication": "2025-01-02T14:30:00Z",
+      "categorie": 1,
+      "auteur": 1
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 3,
+    "fields": {
+      "titre": "Découvrir la beauté du minimalisme",
+      "slug": "decouvrir-la-beaute-du-minimalisme",
+      "contenu": "Le minimalisme n'est pas seulement une tendance esthétique, c'est une philosophie de vie qui peut transformer notre rapport aux objets, à l'espace et au temps.\n\nEn adoptant une approche minimaliste, nous apprenons à :\n- Nous concentrer sur l'essentiel\n- Réduire le désordre physique et mental\n- Apprécier la qualité plutôt que la quantité\n- Trouver la beauté dans la simplicité\n\nCette approche peut s'appliquer à tous les aspects de notre vie, du design de nos espaces de vie à la conception de nos sites web.",
+      "date_publication": "2025-01-03T09:15:00Z",
+      "categorie": 2,
+      "auteur": 1
+    }
+  }
+]

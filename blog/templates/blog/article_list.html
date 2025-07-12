@@ -1,0 +1,56 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Articles - {{ block.super }}{% endblock %}
+
+{% block content %}
+    {% if articles %}
+        {% for article in articles %}
+            <article class="article-card">
+                <div class="article-content">
+                    <h2><a href="{{ article.get_absolute_url }}" class="article-title">{{ article.title }}</a></h2>
+                    <div class="article-meta">
+                        <span class="meta-item">
+                            <span>By {{ article.author.get_full_name|default:article.author.username }}</span>
+                        </span>
+                        <span class="meta-item">
+                            <span>{{ article.published_date|date:"F j, Y" }}</span>
+                        </span>
+                        <span class="meta-item">
+                            <a href="{% url 'blog:article_list' %}?category={{ article.category.id }}" class="category-tag">{{ article.category.name }}</a>
+                        </span>
+                    </div>
+                    <div class="article-excerpt">
+                        {{ article.content|truncatewords:40|linebreaks }}
+                    </div>
+                    <a href="{{ article.get_absolute_url }}" class="read-more">
+                        Read more <span>→</span>
+                    </a>
+                </div>
+            </article>
+        {% endfor %}
+        
+        <!-- Pagination -->
+        {% if is_paginated %}
+            <div class="pagination">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">« First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">‹ Previous</a>
+                {% endif %}
+                
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+                
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next ›</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last »</a>
+                {% endif %}
+            </div>
+        {% endif %}
+    {% else %}
+        <div class="empty-state">
+            <h2>No Articles Yet</h2>
+            <p>There are currently no articles published on this blog. Check back soon for new content!</p>
+        </div>
+    {% endif %}
+{% endblock %}

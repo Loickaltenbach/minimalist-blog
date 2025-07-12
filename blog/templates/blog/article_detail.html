@@ -1,0 +1,32 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ article.title }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <article class="article-single">
+        <header class="article-header">
+            <h1 class="article-title">{{ article.title }}</h1>
+            <div class="article-meta">
+                <span class="meta-item">
+                    <span>By <strong>{{ article.author.get_full_name|default:article.author.username }}</strong></span>
+                </span>
+                <span class="meta-item">
+                    <span>{{ article.published_date|date:"F j, Y \a\t g:i A" }}</span>
+                </span>
+                <span class="meta-item">
+                    <a href="{% url 'blog:article_list' %}?category={{ article.category.id }}" class="category-tag">{{ article.category.name }}</a>
+                </span>
+            </div>
+        </header>
+        
+        <div class="article-body">
+            {{ article.content|linebreaks }}
+        </div>
+    </article>
+    
+    <nav class="back-nav">
+        <a href="{% url 'blog:article_list' %}" class="back-btn">
+            <span>←</span> Back to Articles
+        </a>
+    </nav>
+{% endblock %}
